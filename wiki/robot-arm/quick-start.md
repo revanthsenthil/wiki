@@ -4,7 +4,3 @@ title: Quick Start
 ---
 
 Welcome to the Robot Arm project!
-
-# Quick Start
-
-TODO

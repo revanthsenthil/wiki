@@ -6,11 +6,23 @@ header:
     key:        wiki
 
 wiki:
-  - title:      Start
+  - title:      Getting Started 
     children:
       - title:  Purpose 
         url:    /wiki/purpose
   - title:      Robot Arm Project 
     children:
+      - title:  About 
+        url:    /wiki/robot-arm/about
       - title:  Quick Start
         url:    /wiki/robot-arm/quick-start
+      - title:  Changelog 
+        url:    /wiki/robot-arm/changelog
+  - title:      Tutorials 
+    children:
+      - title:  Setup ROS (Start Here) 
+        url:    /wiki/tutorials/setup-ros
+      - title:  Setup ROS with RoboStack (easy) 
+        url:    /wiki/tutorials/setup-ros-robostack
+      - title:  ROS Tutorial - Snake Game
+        url:    /wiki/tutorials/snake-tutorial
