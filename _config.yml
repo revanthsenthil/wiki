@@ -18,7 +18,7 @@
 ##############################
 text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : wiki.purduearc.com 
+url     : purduearc.com/wiki 
 baseurl : # does not include hostname
 title   : The wiki for the Purdue Autonomous Robotics Club 
 description: > # this means to ignore newlines until "Language & timezone"
@@ -46,15 +46,15 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: purdue-arc/wiki
 repository_tree: master
 
 
 ## => Paths
 ##############################
 paths:
-  root    : # title link url, "/" (default)
-  wiki    : # wiki layout url, "/" (default)
+  root    : /wiki # title link url, "/" (default)
+  wiki    : /wiki # wiki layout url, "/" (default)
   rss     : # "/feed.xml" (default)
 
 
@@ -78,10 +78,10 @@ mathjax: # false (default), true
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true #false (default), true
 
 ## Chart
-chart: # false (default), true
+chart: true # false (default), true
 
 
 ## => Paginate
@@ -192,7 +192,7 @@ collections_dir: wiki
 collections:
   wiki:
     output: true
-    permalink: /:collection/:name
+    permalink: /wiki/:collection/:name
 
 
 defaults:
