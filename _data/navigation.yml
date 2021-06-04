@@ -10,10 +10,10 @@ wiki:
     children:
       - title:  Purpose 
         url:    /wiki/purpose
-  - title:      Robot Arm Project 
-    children:
-      - title:  About 
-        url:    /wiki/robot-arm/about
+        #- title:      Robot Arm Project 
+        #children:
+        #- title:  About 
+        #url:    /wiki/robot-arm/about
         #- title:  Quick Start
         #url:    /wiki/robot-arm/quick-start
         #- title:  Changelog 
