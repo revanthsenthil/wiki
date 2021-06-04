@@ -14,10 +14,10 @@ wiki:
     children:
       - title:  About 
         url:    /wiki/robot-arm/about
-      - title:  Quick Start
-        url:    /wiki/robot-arm/quick-start
-      - title:  Changelog 
-        url:    /wiki/robot-arm/changelog
+        #- title:  Quick Start
+        #url:    /wiki/robot-arm/quick-start
+        #- title:  Changelog 
+        #url:    /wiki/robot-arm/changelog
   - title:      Tutorials 
     children:
       - title:  Setup ROS (Start Here) 
