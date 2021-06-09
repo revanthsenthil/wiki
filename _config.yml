@@ -20,7 +20,7 @@ text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", 
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : wiki.purduearc.com 
 baseurl : # does not include hostname
-title   : The wiki for the Purdue Autonomous Robotics Club 
+title   : Purdue ARC Wiki
 description: > # this means to ignore newlines until "Language & timezone"
   Learn about the robotics projects that we build at Purdue ARC!
 
