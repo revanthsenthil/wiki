@@ -30,6 +30,6 @@ wiki:
   - title:      Contributing 
     children:
       - title:  Quick Start 
-        url:    /wiki/contributing
+        url:    /wiki/contributing/quick-start
       - title:  Wiki Page Template 
-        url:    /wiki/template
+        url:    /wiki/contributing/template
