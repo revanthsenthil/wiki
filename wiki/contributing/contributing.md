@@ -1,7 +1,8 @@
-# arc-wiki
-The wiki for the Autonomous Robotics Club's project teams.
-
-## Contributing
+---
+layout: article
+title: Contribution Quickstart 
+key: contribute-quickstart
+---
 
 ## New Page
 To add a page, follow these steps:

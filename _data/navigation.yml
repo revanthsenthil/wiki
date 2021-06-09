@@ -9,7 +9,7 @@ wiki:
   - title:      Getting Started 
     children:
       - title:  Purpose 
-        url:    /wiki/purpose
+        url:    /wiki/purpose # url is always path/to/markdown/file in kebab-case
         #- title:      Robot Arm Project 
         #children:
         #- title:  About 
@@ -26,3 +26,10 @@ wiki:
         url:    /wiki/tutorials/setup-ros-robostack
       - title:  ROS Tutorial - Snake Game
         url:    /wiki/tutorials/snake-tutorial
+
+  - title:      Contributing 
+    children:
+      - title:  Quick Start 
+        url:    /wiki/contributing/contributing
+      - title:  Wiki Page Template 
+        url:    /wiki/contributing/template
