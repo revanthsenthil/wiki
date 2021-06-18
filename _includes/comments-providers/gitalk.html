@@ -11,7 +11,6 @@
 			color: #333 !important;
 		}
 	</style>
-
 	{%- include snippets/get-sources.html -%}
 	{%- assign _sources = __return -%}
 	<div class="gitalk-wrapper" id="js-gitalk-container"></div>
@@ -30,6 +29,7 @@
 				repo: '{{ site.comments.gitalk.repository }}',
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
+        proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
 				id: '{{ page.key }}'
 			});
 			gitalk.render('js-gitalk-container');
