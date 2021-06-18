@@ -1,6 +1,6 @@
 ---
-layout: article
-title: About
+layout: landing 
+title:  
 key: page-about
 ---
 

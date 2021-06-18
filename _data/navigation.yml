@@ -1,6 +1,6 @@
 header:
-  - title:      Home
-    url:        /about.html
+  - title:      Home 
+    url:        /
   - title:      Wiki
     url:        /wiki
     key:        wiki

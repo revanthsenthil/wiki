@@ -18,7 +18,7 @@
 ##############################
 text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : wiki.purduearc.com 
+url     : 
 baseurl : # does not include hostname
 title   : Purdue ARC Wiki
 description: > # this means to ignore newlines until "Language & timezone"
@@ -54,6 +54,7 @@ repository_tree: master
 ##############################
 paths:
   root    : # title link url, "/" (default)
+  home    : # title link url, "/" (default)
   wiki    : /wiki # wiki layout url, "/" (default)
   rss     : # "/feed.xml" (default)
 
@@ -183,18 +184,6 @@ collections:
 
 
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: article
-      sharing: true
-      license: true
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
   - scope:
       path: "wiki"
     values:
