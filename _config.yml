@@ -181,6 +181,7 @@ collections:
     output: true
     permalink: /:collection/:name
 
+
 defaults:
   - scope:
       path: ""
@@ -199,7 +200,6 @@ defaults:
     values:
       layout: article 
       nav_key: wiki 
-      key: /:collection/:name
       pageview: true
       sidebar:
         nav: wiki 
