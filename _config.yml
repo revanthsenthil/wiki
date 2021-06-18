@@ -117,12 +117,14 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : bd0f29091842158ea699 # GitHub Application Client ID
+    clientSecret: 6406f50dbe27c3da0c7eaa27f0f3d93c4ce70f5d # GitHub Application Client Secret
+    repository  : wiki # GitHub repo
+    owner       : purdue-arc # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      - raghavauppuluri13
+      - hmccarty
+      - jrbaxter0
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -221,7 +223,6 @@ defaults:
       show_edit_on_github: true
       show_date: false
       # lightbox: true
-
 
 ## => Plugins
 ##############################
