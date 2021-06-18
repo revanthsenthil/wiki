@@ -108,7 +108,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: "gitalk" # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Gitalk
   gitalk:
@@ -180,8 +180,6 @@ collections:
   wiki:
     output: true
     permalink: /:collection/:name
-    key: /:collection/:name
-
 
 defaults:
   - scope:
@@ -199,8 +197,10 @@ defaults:
   - scope:
       path: "wiki"
     values:
-      layout: article
+      layout: article 
       nav_key: wiki 
+      key: /:collection/:name
+      pageview: true
       sidebar:
         nav: wiki 
       license: false 
@@ -208,7 +208,7 @@ defaults:
         toc: true
       show_edit_on_github: true
       show_date: true 
-      # lightbox: true
+      lightbox: true
 
 ## => Plugins
 ##############################
