@@ -65,6 +65,8 @@ def recover_msg(msg):
 ```
 This would be a good spot further explain you code snippet. Break it down for the user so they understand what is going on.
 
+## Second subheading 
+
 ### Helpful Markdown Extensions
 
 #### LaTex Math Support
@@ -137,11 +139,46 @@ graph TB;
 }
 ```
 
-#### Images
+### Images/GIFs
 
 Add images to the `assets/images` folder that is present in every project directory
+```
+![Put a relevant caption here](assets/images/wario.png)
+```
+
+or using html if you want to define the width of the image
+```
+<img src="assets/images/wario.png" alt="Put a relevant caption here" width="400"/>
+```
 
 ![Put a relevant caption here](assets/images/wario.png)
+
+
+Adding GIFs is the same process as images except put them in `assets/gifs`. 
+
+### Videos 
+
+Videos take up a lot of space in GitHub, so we recommend using Google Drive as it is currently supported.
+
+#### Google Drive
+
+1. For the desired video, change the link sharing setting to `On - Anyone with the link`. This will make the video accessible to anyone who has the link as no sign-in is required.
+**Important**: If you do not change the video setting to this option, your video will not show.
+2. Double click the video to show the preview. Click the setting options and select "Open in new window". Now click on the setting option again and select "Embed item". The iframe code should appear. For the following code, `1EC8BnjJMon-vqy-UhLKk9sf_oukZzEbP/preview` would be your video ID.
+
+```
+<iframe src="https://drive.google.com/file/d/1EC8BnjJMon-vqy-UhLKk9sf_oukZzEbP/preview"></iframe>
+```
+
+3.
+Lastly, add the following snippet to [include](https://jekyllrb.com/docs/includes/) the embedded video in your article. Remove the space between `{` and `%` to see the embed.
+```
+{ % include googleDrivePlayer.html id="id" % }
+```
+
+#### Other
+
+To add support for other options, refer to [this repo](https://github.com/nathancy/jekyll-embed-video). 
 
 ## Summary
 Use this space to reinforce key points and to suggest next steps for your readers.
@@ -152,3 +189,4 @@ Use this space to reinforce key points and to suggest next steps for your reader
 ## References
 - Links to References go here.
 - Adapted from the [Robotics Knowledgebase](https://github.com/RoboticsKnowledgebase/roboticsknowledgebase.github.io/blob/master/_templates/template.md) template
+- Video embed for Google Drive steps adapted from [jekyll embed video repo](https://github.com/nathancy/jekyll-embed-video)
