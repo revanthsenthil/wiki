@@ -180,16 +180,16 @@ collections_dir: wiki
 collections:
   wiki:
     output: true
-    permalink: /:collection/:name
+    permalink: /:name
 
 
 defaults:
   - scope:
-      path: "wiki"
+      path: ""
     values:
       layout: article 
       nav_key: wiki 
-      pageview: true
+      pageview: false 
       sidebar:
         nav: wiki 
       license: false 

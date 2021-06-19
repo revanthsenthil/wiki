@@ -1,15 +1,13 @@
 header:
-  - title:      Home 
-    url:        /
   - title:      Wiki
-    url:        /wiki
+    url:        /
     key:        wiki
 
 wiki:
   - title:      Getting Started 
     children:
       - title:  Quick Start 
-        url:    /wiki 
+        url:    /
   - title:      Robot Arm Project 
     children:
       - title:  Start Here 
