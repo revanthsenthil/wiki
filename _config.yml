@@ -55,7 +55,7 @@ repository_tree: master
 paths:
   root    : # title link url, "/" (default)
   home    : # title link url, "/" (default)
-  wiki    : /wiki # wiki layout url, "/" (default)
+  wiki    : # wiki layout url, "/" (default)
   rss     : # "/feed.xml" (default)
 
 
@@ -151,7 +151,7 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : G-V01YNJ9W33 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
