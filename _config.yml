@@ -188,10 +188,9 @@ defaults:
       path: ""
     values:
       layout: article 
-      nav_key: wiki 
       pageview: false 
       sidebar:
-        nav: wiki 
+        nav: wiki
       license: false 
       aside:
         toc: true
