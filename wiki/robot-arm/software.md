@@ -11,7 +11,7 @@ TODO
 
 ## Quick start
 
-1. [Install ROS](https://wiki.purduearc.com/wiki/tutorials/setup-ros)
+1. [Setup ROS]({% link wiki/tutorials/setup-ros.md %}) if you haven't done so
 
 2. Clone this repo into the `src` folder in your ROS workspace
 ```

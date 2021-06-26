@@ -20,9 +20,14 @@ There are two parts to this tutorial:
   you will now look at improving the controller and seeing how high of 
   score your snake can get.
 
-> Before continuing, ensure you have
-gone through the process of
-[setting up your ARC development environment](../../docs/00_introduction.md).
+## Setup
+> If you haven't setup ROS, please do so [here]({% link wiki/tutorials/setup-ros.md %}).
+
+Clone the repo into your ROS workspace `src` folder
+
+```
+git clone https://github.com/purdue-arc/arc_tutorials.git
+```
 
 ## Verification
 Ensure your file structure matches the following:

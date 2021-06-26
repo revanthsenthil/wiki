@@ -16,10 +16,8 @@ wiki:
         url:    /wiki/robot-arm/software
   - title:      Tutorials 
     children:
-      - title:  Setup ROS (Start Here) 
+      - title:  Setup ROS
         url:    /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
-      - title:  Setup ROS with RoboStack (easy) 
-        url:    /wiki/tutorials/setup-ros-robostack
       - title:  ROS Tutorial - Snake Game
         url:    /wiki/tutorials/snake-tutorial
 
