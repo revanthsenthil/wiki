@@ -2,7 +2,7 @@
 date: 2021-06-01
 title: Tutorial - Setup ROS
 ---
-> If you have a Linux system that works well, use this [tutorial](http://wiki.ros.org/ROS/Installation) instead to install ROS noetic.
+> If you have a Linux system that works well, you can use this [tutorial](http://wiki.ros.org/ROS/Installation), but using the following Robostack tutorial is more straightforward, easier to understand + debug problems since it uses conda virtual environments.
 
 The following tutorial is preferred for **MacOS and Windows** systems.
 
@@ -130,6 +130,15 @@ conda deactivate
 conda activate robostackenv
 ```
 
+### 4. (Optional) Install rosdep
+Make it simple to download all ROS packages using rosdep
+```
+mamba install rosdep
+rosdep init  # note: do not use sudo!
+rosdep update
+
+```
+
 ## Final Step: Test if your ROS install works
 By now you have ROS installed in your conda environment. You can now create a ROS catkin workspace and add some packages with it, and run it to test to see if things work.
 
@@ -155,6 +164,7 @@ source ~/catkin_ws/devel/setup.bash # or setup.zsh if you use zsh
 If you have a ROS package in mind to add to your workspace, add it to your `src` folder in your catkin workspace using the `git clone` command, then build and source.
 
 If not, add this robot car test ROS package to your `src` folder, build, and source.
+
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/raghavauppuluri13/robot_car_description.git

@@ -2,6 +2,8 @@ header:
   - title:      Wiki
     url:        /
     key:        wiki
+  - title:      Github 
+    url:        https://github.com/purdue-arc/wiki
 
 wiki:
   - title:      Getting Started 
@@ -12,7 +14,7 @@ wiki:
     children:
       - title:  Start Here 
         url:    /wiki/robot-arm/start-here
-      - title:  Software 
+      - title:  Software Docs
         url:    /wiki/robot-arm/software
   - title:      Tutorials 
     children:
