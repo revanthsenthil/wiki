@@ -21,13 +21,13 @@ Each current status of each component is as follows.
 
 ### Car
 
-The car is the complete physical system of one player on the field. Tests were performed on off-the-shelf cars, however none met the desired criteria for acceleration and control. To solve this issue, the team replaced the electronics of the best-tested car and found the following results:
+The car is the complete physical system of one player on the field. Tests were performed on off-the-shelf cars, however none met the desired criteria for acceleration and control. To solve this issue, the team upgraded the electronics of the best-tested car and found the following results:
 
 <figure class="video_container">
   <iframe src="https://drive.google.com/file/d/1hoZkHQMXcIDrOJjSXYIXwCfNXiyw8jH6/view?resourcekey" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
-> Left: upgraded car, middle: stock car, right: control
+> Left: upgraded car, middle & right: stock cars
 
 The car's upgrades replaced: the servo motors, receiver, motor controller and battery.
 
@@ -58,9 +58,17 @@ TODO: include picture of car's upgrades
 
 ### Waypoint Controller
 
-<!-- TODO: fill in section -->
+The waypoint controller falls within a grouping of components known as the "midlevel software". Often these components are the glue between pure-software and hardware.
+
+> For more info on midlevel software, follow up [here]({% link wiki/rocket-league/midlevel-software.md %})
+
+This component is what commands the car to follow specific velocities and wheel angles. It accomplishes this by applying the [pure pursuit algorithm](https://www.mathworks.com/help/robotics/ug/pure-pursuit-controller.html#:~:text=Pure%20pursuit%20is%20a%20path,in%20front%20of%20the%20robot.&text=You%20can%20think%20of%20this,point%20in%20front%20of%20it.) on the path given by the trajectory planner.
 
 ### Trajectory Planner
+
+<!-- TODO: fill in section -->
+
+### Simulator
 
 <!-- TODO: fill in section -->
 
