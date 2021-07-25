@@ -24,7 +24,6 @@ To add a page, follow these steps:
 ## Running Locally
 
 If you want to check your changes on a local, development server then follow these steps:
-All you need todo is these 3 steps:
 
 1. [Install Docker](https://docs.docker.com/install/).
 
