@@ -70,6 +70,10 @@ This component is what commands the car to follow specific velocities and wheel 
 
 ### Simulator
 
+The simulator uses pybox2d. It allows us to test the high level planner, the Waypoint Controller, and the Trajectory Planner. The simulator subscribes to the car's target velocity (from the Waypoint Controller), and publishes car and field poses. It is considered part of the midlevel software.
+
+> For more info on midlevel software, follow up [here]({% link wiki/rocket-league/midlevel-software.md %})
+
 <!-- TODO: fill in section -->
 
 ### High Level Planner
