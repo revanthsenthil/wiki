@@ -4,6 +4,7 @@ date: 2021-06-17
 title: Software Documentation
 author: Raghava Uppuluri
 ---
+> If you want to look at code and run some of it, check out [arc_robot_arm](https://github.com/purdue-arc/arc_robot_arm) README for quick start details and usage instructions.
 
 ## System Overview
 
@@ -56,12 +57,12 @@ class l2 in_progress
 class l3 done
 ```
 
-**NOTE:** The quick start code snippets in the following docs assume you have [setup](https://github.com/purdue-arc/arc_robot_arm) the `arc_robot_arm` repo.
 
 ## High level
 
 ### Task Planner
 After the robot turns on, what does it do? This is the job of the task planner. Take inputs from the world using other tools in the stack, analyze, and make a decision. The decision flowchart that a robot can make is modeled here:
+
 ```mermaid
 graph
   a1[Scanning for change in board state]
@@ -83,24 +84,19 @@ Some resources we can try to use to complete the above:
 ## Mid level
 
 ### Chess Piece Detection with YOLOv5
+How does our robot determine which piece is which? This is a common scenario in many real-world use cases and object detection, as the name suggests, is used to detect the chess pieces.
 
 The object detection stack consists of the [YOLOv5](https://github.com/ultralytics/yolov5) object detection model trained on a custom dataset and outputs 2d bounding boxes. 
 
 For chess, the model is trained with a custom large chess piece dataset of 500+ images stored on [roboflow](https://app.roboflow.com/). [Here](https://colab.research.google.com/drive/1XJ82eVA0cEfTczXFMtV1sunqvsfiJWQ0?usp=sharing) is a simple colab that walks through the training process using a Roboflow dataset.
 
 Inference is using the `yolov5_pytorch_ros` ROS package using the `detector` ROS node using Python/PyTorch, allowing it to communicate detections and classes to other nodes such as for visual servoing. It reaches around 15-20 FPS without a GPU on a Mac.
-> See [yolov5_pytorch_ros](https://github.com/raghavauppuluri13/yolov5_pytorch_ros) for more details and usage instructions.
 
-#### Quick Start
-
-1. Run the detector node
-```
-roslaunch chess_piece_detector detector.launch
-```
-2. In another window, run rqt by running `rqt`, click image to view images, and select `detections_image_topic`
-3. If you have some chess pieces, put them in the camera view and see the detections
+> See [chess_piece_detector](https://github.com/purdue-arc/arc_robot_arm/tree/main/chess_piece_detector) for quick start details and usage instructions.
 
 ### Visual Servoing (WIP) 
+Without "eyes", our robot is blind and any error that the robot makes cannot be accounted for and adjusted for accordingly, resulting in lots of fails. Visual servoing is one method of providing eyes for our robot and the algorithm to control for any errors that the robot makes.
+
 We are using image-based visual servoing to localize the robot arm hand over an object in a graspable configuration, using images/2d bounding boxes as inputs to the system and servo commands as outputs.
 
 <img src="assets/images/vs-diagram.png" alt="Diagram of controller" width="400"/>
@@ -109,11 +105,18 @@ We are using image-based visual servoing to localize the robot arm hand over an 
 See the `protoarm_visual_servoing` package for more details.
 
 ### Kinematics and Planning 
-As of now, all the kinematics and planning heavy lifting is done by MoveIt. The `protoarm_kinematics` package houses a wrapper written in C++ that abstracts the process of sending [JointState](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/JointState.html) or [Pose](http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html) goals. 
+
+As a human, it is simple to move our joints and pick something up in 3D space. For a robot arm, it knows nothing of 3D space, only numerical angles for each of its joints. So, we use [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics) (IK), the mathematical process of converting 3D space coordinates to joint angles, to determine the final position for the robot arm. 
+
+Now what happens between the start and final position? That's the job of the motion planner. It determines a safe collision-free trajectory for each joint and creates the plan. Then, the plan is executed, either in real life or in simulation. 
+
+As of now, all the kinematics and planning heavy lifting is done by [MoveIt](http://moveit.ros.org/). The `protoarm_kinematics` package houses a wrapper written in C++ that abstracts the process of sending [JointState](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/JointState.html) or [Pose](http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html) goals. 
 
 The wrapper is interfaced externally using the `move_to` node. Refer to the [test_kinematics](https://github.com/purdue-arc/arc_robot_arm/blob/main/protoarm_kinematics/src/test_kinematics) rospy file in `protoarm_kinematics/src` for usage of the `move_to` node. 
 
 This package is also where we would keep our custom kinematics plugin and planning library if we choose to make it from scratch, instead of the default [KDL](https://ros-planning.github.io/moveit_tutorials/doc/kinematics_configuration/kinematics_configuration_tutorial.html#the-kdl-kinematics-plugin) kinematics plugin and [OMPL](https://ros-planning.github.io/moveit_tutorials/doc/ompl_interface/ompl_interface_tutorial.html) motion planning library. 
+
+> See [protoarm_kinematics](https://github.com/purdue-arc/arc_robot_arm/tree/main/protoarm_kinematics) for quick start details and usage instructions.
 
 ### Chessboard Detection
 Playing chess is more than just picking and placing pieces. The robot needs to actually beat the human. We need to know the exact state of the chessboard, so another person or an overpowered engine can say what move to play next.
@@ -147,26 +150,15 @@ The `protoarm_driver` is written in Arduino that actually interfaces with the se
 
 ### Gazebo
 
-To speed up development and test software, our arm is simulated in Gazebo with a Realsense D435 camera (`realsense_ros_gazebo`), chessboard, and chess pieces (`chessboard_gazebo`). The robot arm and the camera are represented in [URDF](http://wiki.ros.org/urdf/XML/model) using XML. 
+There are lots of benefits from simulation spanning from speeding up development and testing of software, realistic environments for reinforcement learning, and testing proof of concepts. 
 
-Sensors, actuation, gazebo plugins, and more are [XML specifications](http://wiki.ros.org/urdf/XML) that can be added. For the arm, these specifications exist in the `.xacro` files in the `urdf` folder of the `protoarm_description` ROS package.
+Our arm is simulated in Gazebo with a Realsense D435 camera (`realsense_ros_gazebo`), chessboard, and chess pieces (`chessboard_gazebo`). The robot arm and the camera are represented in [URDF](http://wiki.ros.org/urdf/XML/model). 
+
+Sensors, actuation, gazebo plugins, and more are [specifications](http://wiki.ros.org/urdf/XML) that can be added. For the arm, these specifications exist in the `.xacro` files in the `urdf` folder of the `protoarm_description` ROS package.
 
 Gazebo uses SDF models (in `models` folder of `chessboard_gazebo`) to represent static assets in the simulation like the chess pieces and chessboard. These objects are then spawned into a Gazebo world (along with the robot URDF), represented with a `.world` file.
 
-#### Quick Start
-
-1. Run the arm without the camera or chessboard
-```
-roslaunch protoarm_bringup sim.launch
-```
-Now, you can send kinematics commands using the `move_to` ROS node and the Gazebo arm will reflect the commands.
-
-2. Run with both the camera and chessboard
-```
-roslaunch protoarm_bringup sim.launch realsense:=true chess:=true
-```
-
-Now, the camera topics are running, so you can run visual servoing, an RL algorithm, that subscribe to those exposed topics like the following demo.
+> See [protoarm_bringup](https://github.com/purdue-arc/arc_robot_arm/tree/main/protoarm_bringup) for quick start details and usage instructions.
 
 {% include googleDrivePlayer.html id="19FZ7lsqCn6DEChjjdBgsTy0feUANYaVO/preview" %}
 
