@@ -16,6 +16,10 @@ wiki:
         url:    /wiki/robot-arm/start-here
       - title:  Software Docs
         url:    /wiki/robot-arm/software
+  - title:      Wizard's Chess Project
+    children:
+      - title:  Start Here 
+        url:    /wiki/wizards-chess/start-here
   - title:      Tutorials 
     children:
       - title:  Setup ROS
