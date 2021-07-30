@@ -6,3 +6,4 @@ author: Ilina Adhikari
 show_author_profile: true # must make a profile in _data/authors.yml
 ---
 
+# Wizard's Chess
