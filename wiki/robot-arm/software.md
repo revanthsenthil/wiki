@@ -1,9 +1,10 @@
 ---
-layout: article
-date: 2021-06-17
 title: Software Documentation
+date: 2021-06-17 00:00:00 Z
+layout: article
 author: Raghava Uppuluri
 ---
+
 > If you want to look at code and run some of it, check out [arc_robot_arm](https://github.com/purdue-arc/arc_robot_arm) README for quick start details and usage instructions.
 
 ## System Overview

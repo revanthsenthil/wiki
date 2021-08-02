@@ -1,6 +1,6 @@
 ---
+title: Contribution Quickstart
 layout: article
-title: Contribution Quickstart 
 key: contribute-quickstart
 ---
 

@@ -1,7 +1,8 @@
 ---
-date: 2021-06-01
-title: Changelog 
+title: Changelog
+date: 2021-06-01 00:00:00 Z
 ---
+
 ## 2021
 - 
 - 
