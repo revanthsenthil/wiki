@@ -26,13 +26,17 @@ Hardware
 - Gripper
 - Mounts + accessories
 
-[Software]({% link wiki/robot-arm/software.md %})
-- Low-level
-  - Servo control
+Software
+- High-level
+  - Task planner or reinforcement learning policy 
 - Mid-level
   - Kinematics + planning, object detection + visual servoing
-- High-level
-  - Task planner or reinforcement learning 
+- Low-level
+  - Servo control
+
+### Want to dig deeper? 
+
+Check out the [software docs]({% link wiki/robot-arm/software.md %}) and [GitHub](https://github.com/purdue-arc/arc_robot_arm) for tutorials and a detailed overview of the software behind the robot.
 
 ## What have we done?
 

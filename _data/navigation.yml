@@ -2,6 +2,8 @@ header:
   - title:      Wiki
     url:        /
     key:        wiki
+  - title:      Github 
+    url:        https://github.com/purdue-arc/wiki
 
 wiki:
   - title:      Getting Started 
@@ -12,14 +14,12 @@ wiki:
     children:
       - title:  Start Here 
         url:    /wiki/robot-arm/start-here
-      - title:  Software 
+      - title:  Software Docs
         url:    /wiki/robot-arm/software
   - title:      Tutorials 
     children:
-      - title:  Setup ROS (Start Here) 
+      - title:  Setup ROS
         url:    /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
-      - title:  Setup ROS with RoboStack (easy) 
-        url:    /wiki/tutorials/setup-ros-robostack
       - title:  ROS Tutorial - Snake Game
         url:    /wiki/tutorials/snake-tutorial
 
