@@ -32,7 +32,7 @@ Rocket League is written in Python, using ROS to handle communication between ea
 
 The following was created Spring '21 to detail our ROS network:
 
-![ROS Network](assets/images/ros-interface.png)
+![ROS Network](assets/images/ros-network.png)
 
 <!-- Introduce terminology such as diff for game and match in RL -->
 
@@ -44,9 +44,7 @@ The current status of each component is as follows:
 
 The car is the complete physical system of one player on the field. Tests were performed on off-the-shelf cars, however none met the desired criteria for acceleration and control. To solve this issue, the team upgraded the electronics of the best-tested car and found the following results:
 
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1hoZkHQMXcIDrOJjSXYIXwCfNXiyw8jH6/view?resourcekey" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+{% include googleDrivePlayer.html id="1hoZkHQMXcIDrOJjSXYIXwCfNXiyw8jH6/preview" %}
 
 > Left: upgraded car, middle & right: stock cars
 

@@ -2,6 +2,7 @@
 date: 2021-07-11
 title: Midlevel Software
 show_author_profile: true
+draft: true
 author: Harrison McCarty, Adrian Teigen
 ---
 
