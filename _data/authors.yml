@@ -1,14 +1,14 @@
 # Add all profile pics in assets/images/pfps
 Raghava Uppuluri:
   name: Raghava Uppuluri
-  avatar: assets/images/pfps/raghavauppuluri.jpg 
+  avatar: assets/images/pfps/raghavauppuluri.jpg
   url: https://raghavauppuluri.dev
   email: ruppulur@purdue.edu
   twitter: UppuluriRaghava
   github: raghavauppuluri13
 Wario:
-  name: Wario 
-  avatar: assets/images/pfps/wario.png 
+  name: Wario
+  avatar: assets/images/pfps/wario.png
   url: https://great-characters.fandom.com/wiki/Wario
   email: wario@gmail.com
 Ilina Adhikari:
@@ -16,3 +16,7 @@ Ilina Adhikari:
   avatar: assets/images/pfps/ilinaadhikari.jpg
   email: iadhikar@purdue.edu
   github: IAdhikari20
+Harrison McCarty:
+  name: Harrison McCarty
+  email: mccarth@purdue.edu
+  github: hmccarty
