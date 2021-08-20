@@ -16,6 +16,11 @@ wiki:
         url:    /wiki/robot-arm/start-here
       - title:  Software Docs
         url:    /wiki/robot-arm/software
+  - title:      Wizard's Chess Project
+    children:
+      - title:  Start Here 
+        url:    /wiki/wizards-chess/start-here
+
   - title:      Rocket League
     children:
       - title:  Start Here 
@@ -28,7 +33,6 @@ wiki:
         url:    /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
       - title:  ROS Tutorial - Snake Game
         url:    /wiki/tutorials/snake-tutorial
-
   - title:      Contributing 
     children:
       - title:  Quick Start 
