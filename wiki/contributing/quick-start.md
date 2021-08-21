@@ -1,6 +1,6 @@
 ---
-layout: article
 title: Contribution Quickstart
+layout: article
 key: contribute-quickstart
 ---
 

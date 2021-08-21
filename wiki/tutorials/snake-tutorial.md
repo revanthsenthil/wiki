@@ -1,6 +1,6 @@
 ---
-date: 2021-06-01
-title: ROS Tutorial - Snake Game 
+title: ROS Tutorial - Snake Game
+date: 2021-06-01 00:00:00 Z
 ---
 
 # Snake Tutorial Introduction
