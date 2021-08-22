@@ -27,7 +27,7 @@ graph
   subgraph Behavior Planning 
     BP1[Behavior Planner]
     BP2[Chess Engine or Human]
-    BP3[RL Policy]
+    %% BP3[RL Policy]
   end
   subgraph Low Level
     direction LR
@@ -58,6 +58,7 @@ graph
 
   %% Behavior Planning
   BP2 --> BP1 
+  BP1 --> PC1 
 
   %% Vision 
   V2 --> BP1 
