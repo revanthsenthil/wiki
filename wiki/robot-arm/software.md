@@ -58,6 +58,7 @@ graph
 
   %% Behavior Planning
   BP2 --> BP1 
+  BP1 --> PC1 
 
   %% Vision 
   V2 --> BP1 
