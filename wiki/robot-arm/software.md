@@ -92,9 +92,9 @@ graph
   classDef not_started fill:#ff8181
   classDef in_progress fill:#ffba82
   classDef done fill:#81ff9b
-  class BP1,BP2,BP3,V2 not_started
-  class PC1,LL1 in_progress
-  class S1,S2,LL2,LL3,V1 done
+  class BP1,LL1,BP2,BP3,V2 not_started
+  class PC1 in_progress
+  class S1,S2,LL2,LL3,V1,PC2,PC3 done
 ```
 
 ```mermaid
