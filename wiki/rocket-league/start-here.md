@@ -22,6 +22,8 @@ Each component falls into a particular grouping:
 
 The above groupings define the subteams of the rocket-league project and enable parallel development.
 
+Often the trajectory planner, waypoint controller, and simulator are lumped into a single subcategory known as "Midlevel software".
+
 > If you have vision processing experience, localization would likely be a good fit. Otherwise those with general programming experience are encouraged to work within software.
 
 ## Tools and Terminology
@@ -79,7 +81,7 @@ An image of this setup is shown below:
 
 ### Low Level Controller
 
-The low-level controller adjusts the commanded speed of car to match the desired output from the waypoint controller. To measure the error from the desired command, the low-level controller inputs data from localization.
+The low-level controller adjusts the commanded speed of car to match the desired output from the waypoint controller. Localization data is used to measure error from the desired command.
 
 ### Localization
 
@@ -97,7 +99,13 @@ This component is what commands the car to follow specific velocities and wheel 
 
 ### Trajectory Planner
 
-<!-- TODO: fill in section -->
+The trajectory planner generates waypoints at given timestamps based on current motion information (from localization) and desired motion information (from high level planner). There is plenty of prior work on this challenge so various approaches were implemented, including:
+- Bezier curves
+- Lagrange functions
+- Hermite splines
+- Recursive splines
+
+Further testing is required to determine which implementation will be used.
 
 ### Simulator
 
@@ -105,7 +113,11 @@ The simulator uses pybox2d to create a virtual environment for testing the high-
 
 ### High Level Planner
 
-<!-- TODO: fill in section -->
+The high level planner uses a defined policy to determine the desired pose and velocity of each car. At the moment, this policy is hardcoded to always aim the ball towards the goal.
+
+A deep-learning framework has been developed to train the planner's policy using reinforcement learning. This framework is currently being verified on more tractable games, such as Snake.
+
+Future work should explore policies that learn with and without (e2e) midlevel controllers.
 
 ## Future work
 
