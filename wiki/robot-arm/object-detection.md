@@ -1,11 +1,12 @@
 ---
-layout: article
-date: 2021-06-17
 title: Creating an object detector using YOLOv5 that integrates with ROS
-author: 
-  - Raghava Uppuluri
-  - Wario
+date: 2021-06-17 00:00:00 Z
+layout: article
+author:
+- Raghava Uppuluri
+- Wario
 ---
+
 Object detection is an essential vision component for robots. This tutorial will cover how to create an object detection pipeline using YOLOv5 that integrates with ROS.
 
 

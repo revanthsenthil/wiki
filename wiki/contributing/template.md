@@ -1,9 +1,9 @@
 ---
+title: How to write a wiki page
+date: 2020-06-08 00:00:00 Z
 layout: article
-date: 2020-06-08
-title: How to write a wiki page 
 author: Wario
-show_author_profile: true # must make a profile in _data/authors.yml
+show_author_profile: true
 ---
 
 This template is a tutorial on creating a page on the ARC wiki. In it we will cover structure, basic syntax, and other useful hints.

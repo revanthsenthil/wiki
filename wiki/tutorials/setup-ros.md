@@ -1,7 +1,8 @@
 ---
-date: 2021-06-01
 title: Tutorial - Setup ROS
+date: 2021-06-01 00:00:00 Z
 ---
+
 > If you have a Linux system that works well, you can use this [tutorial](http://wiki.ros.org/ROS/Installation), but using the following Robostack tutorial is more straightforward, easier to understand + debug problems since it uses conda virtual environments.
 
 The following tutorial is preferred for **MacOS and Windows** systems.

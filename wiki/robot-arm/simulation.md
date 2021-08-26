@@ -1,9 +1,10 @@
 ---
-date: 2021-06-15
 title: Simulation Engineering with ROS, MoveIt, and Gazebo for Robot Arms
+date: 2021-06-15 00:00:00 Z
 show_author_profile: true
 author: Raghava Uppuluri
 ---
+
 This tutorial aims to streamline the transfer of your robot to simulation and will provide step-by-step instructions for turning a robot arm CAD model to a Gazebo simulation that can be controlled with MoveIt/ROS.
 
 ## Prerequisites
