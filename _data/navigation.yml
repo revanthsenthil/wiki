@@ -29,9 +29,11 @@ wiki:
         #url:    /wiki/rocket-league/mid-level
   - title:      Tutorials 
     children:
+      - title:  Project Management
+        url:    /wiki/tutorials/project-management
       - title:  Setup ROS
         url:    /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
-      - title:  ROS Tutorial - Snake Game
+      - title:  ROS Tutorial
         url:    /wiki/tutorials/snake-tutorial
   - title:      Contributing 
     children:
