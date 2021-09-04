@@ -3,40 +3,27 @@ title: Start Here
 date: 2021-06-01 00:00:00 Z
 ---
 
-## Goal 
+## Goal
 
-Our overarching goal is to explore the robotic manipulation, robot vision, robot control, and reinforcement learning by building a robot arm. In our journey, we plan to publish our progress, tutorials, and understandings.
+### Mission
 
-Right now, we're building a robot arm that can play chess.
+Our overarching goal is to explore why robots are limited to factory environments and why we don't have them cooking for us  and folding our clothes yet.
 
-## Meet the robots
+In our journey, we plan to publish our progress, tutorials, code, and workshops. 
 
-### Protoarm (stable)
+### Right row 
 
-This is protoarm (short for prototype arm), a 5-DOF robot arm adapted slightly from [HowToMechatronics' model](https://www.youtube.com/watch?v=_B3gWd3A_SI) that we built first to understand ROS, MoveIt, and the software stack for robot arms.
+Right now, we're building software/hardware for a robot arm to play chess. 
 
-<img src="assets/images/protoarm.png" alt="Protoarm CAD" width="400"/>
+From this, we hope to validate fundamental understanding of robot arm design, control (using control systems and/or reinforcement learning), sensor systems (vision, encoders, tactile), and mechanical actuator systems (servos, steppers, gearboxes). 
 
-### Mr. Janktastic (WIP)
+#### Hardware
+We currently have two hardware efforts:
+1. Designing a [Mr. Janktastic](https://wiki.purduearc.com/wiki/robot-arm/hardware#mr-janktastic) from scratch
+2. Building the [open-source BCN3D Moveo Arm](https://wiki.purduearc.com/wiki/robot-arm/hardware#bcn3d-moveo) for a better hardware system for software to experiment and test vision, RL systems with.
 
-## Subsystems 
-
-Hardware
-- Arm 
-- Gripper
-- Mounts + accessories
-
-Software
-- High-level
-  - Task planner or reinforcement learning policy 
-- Mid-level
-  - Kinematics + planning, object detection + visual servoing
-- Low-level
-  - Servo control
-
-### Want to dig deeper? 
-
-Check out the [software docs]({% link wiki/robot-arm/software.md %}) and [GitHub](https://github.com/purdue-arc/arc_robot_arm) for tutorials and a detailed overview of the software behind the robot.
+#### Software 
+Working on a variety of problems in vision, control, and high level planning (RL soon!)). See the [Software Docs](https://wiki.purduearc.com/wiki/robot-arm/software) for a deeper dive.
 
 ## What have we done?
 
