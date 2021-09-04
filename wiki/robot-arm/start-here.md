@@ -11,7 +11,7 @@ Our overarching goal is to explore why robots are limited to factory environment
 
 In our journey, we plan to publish our progress, tutorials, code, and workshops. 
 
-### Right row 
+### Right now 
 
 Right now, we're building software/hardware for a robot arm to play chess. 
 
