@@ -20,6 +20,8 @@ wiki:
     children:
       - title:  Start Here 
         url:    /wiki/wizards-chess/start-here
+      - title:  Software Docs
+        url:    /wiki/wizards-chess/software
 
   - title:      Rocket League
     children:
