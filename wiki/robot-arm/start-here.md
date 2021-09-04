@@ -20,7 +20,7 @@ From this, we hope to validate fundamental understanding of robot arm design, co
 #### Hardware
 We currently have two hardware efforts:
 1. Designing a [Mr. Janktastic](https://wiki.purduearc.com/wiki/robot-arm/hardware#mr-janktastic) from scratch
-2. Building the [open-source BCN3D Moveo Arm](https://wiki.purduearc.com/wiki/robot-arm/hardware#bcn3d-moveo) for a better hardware system for software to experiment and test vision, RL systems with.
+2. Building the [open-source BCN3D Moveo Arm](https://wiki.purduearc.com/wiki/robot-arm/hardware#bcn3d-moveo-arm) for a better hardware system for software to experiment and test vision, RL systems with.
 
 #### Software 
 Working on a variety of problems in vision, control, and high level planning (RL soon!)). See the [Software Docs](https://wiki.purduearc.com/wiki/robot-arm/software) for a deeper dive.
