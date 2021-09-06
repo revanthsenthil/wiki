@@ -18,12 +18,15 @@ wiki:
         url:    /wiki/robot-arm/software
       - title:  Hardware Docs
         url:    /wiki/robot-arm/hardware
+
   - title:      Wizard's Chess Project
     children:
       - title:  Start Here 
         url:    /wiki/wizards-chess/start-here
       - title:  Software Docs
         url:    /wiki/wizards-chess/software
+      - title:  Hardware Docs
+        url:    /wiki/wizards-chess/hardware
 
   - title:      Rocket League
     children:
