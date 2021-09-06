@@ -9,11 +9,11 @@ author: James Baxter, Harrison McCarty
 
 Build a system of autonomous, scaled vehicles to play head-to-head in a game of high-speed soccer. Inspiration draws from the game, Rocket League, in which rocket-powered vehicles play soccer in 3v3 matches.
 
-Current goals are to create an interactive demo, where a team of human controlled cars compete against a team of autonomous cars. Future work may entail using the working system to launch a campus-wide competition. Here, students would have limited amount of time to build their own autonomous strategies and face-off in a tournament bracket.
+Current tasks are aimed at creating an interactive demo, where a team of human controlled cars compete against a team of autonomous cars. Future work may entail using the working system to launch a multi-university competition. Teams would build their own autonomous strategies and face-off in a tournament bracket.
 
 ## System Overview
 
-Our system is organized into several components, which function together to create an autonomous Rocket League Car.
+Our system is organized into several components, which function together to create an autonomous Rocket League car.
 
 ![System Overview](assets/images/system-overview.png)
 
@@ -62,7 +62,7 @@ This component is what enables the car to follow the generated trajectories. It 
 
 ### Velocity Controller
 
-This component (also called the low-level controller) adjusts the control efforts (specific throttle and steering values) such that the velocity and heading of the car to matches the desired setpoint from the waypoint controller. It implements a PID controller, and is currently written in Python. Future work may see it ported to a different language, such as C++ or MATLAB.
+This component (also called the low-level controller) adjusts the control efforts (specific throttle and steering values) such that the velocity and heading of the car matches the desired setpoint from the waypoint controller. It implements a PID controller, and is currently written in Python. Future work may see it ported to a different language, such as C++ or MATLAB.
 
 ### Hardware Inferface
 
@@ -105,11 +105,11 @@ Future work intends on using aluminum square tubing to rigidly mount cameras wit
 
 ### Perception
 
-The perception system is responsible for tracking odometry (position, orientation, linear velocity, and angular velocity) each car and the position and velocity of the ball.
+The perception system is responsible for tracking odometry (position, orientation, linear velocity, and angular velocity) for each car and the position and velocity of the ball.
 
 In the prototype system, cars are tracked through [AprilTags](https://april.eecs.umich.edu/software/apriltag#:~:text=AprilTag%20is%20a%20visual%20fiducial,tags%20relative%20to%20the%20camera.) and the ball through OpenCV color thresholding techniques. ARC uses C++ for both systems.
 
-In order to capture the size of the operating field, multiple cameras are required. The current system uses two PointGrey (now FLIR) cameras and two Basler cameras.
+In order to capture the size of the operating field, multiple cameras are required. The current system uses two PointGrey (FLIR) cameras and two Basler cameras.
 <!-- Insert info about camera specs -->
 
 Scaling the prototype system to function on four cameras rather than one requires additional hardware, which will be purchased in the Fall of 2021. The system will also see some redesign in order to achieve better accuracy.
