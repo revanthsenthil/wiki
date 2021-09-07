@@ -31,16 +31,19 @@ If you want to check your changes on a local, development server you can either 
 1. [Install Docker](https://docs.docker.com/install/).
 
 2. Generate _Gemfile.lock_:
-
-   ```bash
-   docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:2.6 bundle install
-   ```
+```bash
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:2.6 bundle install
+```
 
 3. Build Docker image:
+```bash
+docker-compose -f ./docker/docker-compose.build-image.yml build
+```
 
-   ```bash
-   docker-compose -f ./docker/docker-compose.build-image.yml build
-   ```
+4. Run Docker image:
+```bash
+docker-compose -f ./docker/docker-compose.default.yml up
+```
 
 ### Ruby
 
