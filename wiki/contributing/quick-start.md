@@ -49,7 +49,7 @@ To add a page, follow these steps:
 
 1. Stage the files to commit: `git add .`
 2. Commit all files to GitHub: `git commit -m "Write comments here"`
-3. Push changes into local repository: `git push main`
+3. Push changes into local repository: `git push`
 4. Submit a [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to ARC wiki on GitHub and let a member of the Leadership Team know. Changes may be requested.
 
 
