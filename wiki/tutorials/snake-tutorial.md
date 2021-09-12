@@ -1,10 +1,9 @@
 ---
-title: ROS Tutorial - Snake Game
+title: ROS Tutorial
 date: 2021-06-01 00:00:00 Z
 ---
 
-# Snake Tutorial Introduction
-## Tutorial Overview
+## Overview
 Before we dive into ROS, let's break down what we will be accomplishing.
 Our end goal is to automate a game of Snake. If you have never heard of
 Snake, then check out an example 
