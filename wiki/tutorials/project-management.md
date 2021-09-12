@@ -64,6 +64,8 @@ The following is a compiled list of the PM's responsibilities:
 
 The leadership team will explicitly state when these tasks need to be completed.
 
+SAO provides [documentation](https://www.purdue.edu/sao/resources/Resources%20for%20New%20Student%20Organizations.html) on the process of completing tasks such as scheduling rooms, submitting activity forms and more.
+
 We understand lots of details in completing these tasks are vague, this is intentional. This offers freedom in how you choose to complete them. It cannot be overstated that if you have any questions, consult the leadership team.
 
 Best of luck!
