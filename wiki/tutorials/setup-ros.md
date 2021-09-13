@@ -14,12 +14,19 @@ Prerequisites:
   - Tutorials: ([Windows](https://www.youtube.com/watch?v=MBBWVgE0ewk), [Mac](https://www.youtube.com/watch?v=x3YfYVVTYvw), [Linux](https://www.youtube.com/watch?v=cBokz0LTizk))
 - High level understanding of Conda ([Conda Docs](https://docs.conda.io/en/latest/))
 
-## [Setup ROS Noetic using RoboStack](https://robostack.github.io/GettingStarted.html)
+**Important notes:**
 
-## Setup your ROS workspace 
+- Not all ROS packages are available using RoboStack. [Here](https://robostack.github.io/noetic.html)'s a list of all the supported packages for each platform. If the packages that you need aren't available, try opening an issue in the GitHub repo. 
+- If all else fails, use the official [ROS tutorials](https://www.ros.org/) using a Linux system (not using a VM or docker if you want access to hardware).
+
+### 1. Setup ROS Noetic using RoboStack
+
+Use the following [tutorial](https://robostack.github.io/GettingStarted.html).
+
+### 2. Setup your ROS workspace 
 By now you have ROS installed in your conda environment. You can now create a ROS catkin workspace and add some packages with it, and run it to test to see if things work.
 
-### 1. Create the catkin workspace
+#### 1. Create the catkin workspace
 In your terminal, run the following commands to create the catkin workspace in your home directory, build, and initialize the workspace:
 
 Creates the workspace filestructure (It is simply just a folder in your home directory called `catkin_ws`, although can be called anything, with an empty `src` folder in it)
@@ -47,7 +54,7 @@ catkin build
 source devel/setup.bash # or setup.zsh if you use zsh
 ```
 
-### 2. Add a ROS package in your workspace and build
+#### 2. Add a ROS package in your workspace and build
 If you have a ROS package in mind to add to your workspace, add it to your `src` folder in your catkin workspace using the `git clone` command, then build and source.
 
 If not, add this robot car test ROS package to your `src` folder, build, and source.
@@ -59,7 +66,7 @@ catkin build
 source ../devel/setup.bash # or setup.zsh
 ```
 
-#### Helpful Debugging Command
+**Helpful Debugging Command:**
 
 To clean and rebuild your entire catkin workspace run this:
 
@@ -74,7 +81,7 @@ catkin build
 source ~/catkin_ws/devel/setup.bash # or setup.zsh
 ```
 
-### 3. Run roslaunch
+#### 3. Run roslaunch
 If everything so far suceeeds, roslaunch the launch file in your own ROS package to test to see if things work.
 
 If you added the `robot_car_description` package, run the following command:
@@ -86,7 +93,7 @@ roslaunch robot_car_description display.launch
 You should get the following window:
 ![rviz demo image](assets/images/rvizdemo.png)
 
-## Conclusion
+### Conclusion
 
 At this point, you should
 **Have:**
