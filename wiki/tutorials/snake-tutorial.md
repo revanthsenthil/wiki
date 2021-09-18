@@ -3,6 +3,8 @@ title: ROS Tutorial
 date: 2021-06-01 00:00:00 Z
 ---
 
+For **Windows**, use the [ConstructSim version](https://app.theconstructsim.com/#/Rosject/369405) of the tutorial.
+
 ## Overview
 Before we dive into ROS, let's break down what we will be accomplishing.
 Our end goal is to automate a game of Snake. If you have never heard of
@@ -56,8 +58,7 @@ you are reading thoroughly, as these tutorials are packed with tons of
 information.
 
 If you run into issues, start by doing independent research. If you haven't
-found a solution after sufficiently making an attempt on your own, then reach 
-out within the [tutorial-assistance Slack channel](https://purduearc.slack.com/archives/C019N8EJRF0).
+found a solution after sufficiently making an attempt on your own, then add your question at the [botttom of this page](http://localhost:4000/wiki/tutorials/snake-tutorial#give-us-feedback). 
 
 
 # Running the Snake Tutorial Example
