@@ -228,3 +228,7 @@ At this point, you should
 - Build a catkin workspace
 - Add new packages to a catkin workspace
 - Use roslaunch to run a ROS project
+
+### Next Steps
+
+If you're new to ROS and want to get a quick deep dive, check out the [ROS snake game tutorial](https://wiki.purduearc.com/wiki/tutorials/snake-tutorial)
