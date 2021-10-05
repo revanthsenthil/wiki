@@ -11,6 +11,8 @@ The mission of this project is to explore the perspective of robotics in terms o
 
 The goal of the project is to build a fully autonomous robot arm that can play the piano. The Human hand, with 27 degrees of freedom has so far been the most dextrous mechanism to play the piano and the closer we get to replicating that degree of freedom and movement, the better it is to move the arm and play the piano.
 
+This semester (Fall 2021), we are planning to build a functional animatronic human hand that can move as close as possible with wrist motion and 5-finger motion, and though not expecting complete autonomy, play locally positioned keys from the hand with the help of the same.
+
 Along the way, we will publish our progress, code, tutorials and workshops.
 
 ### Right Now
