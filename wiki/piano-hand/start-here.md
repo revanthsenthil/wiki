@@ -16,9 +16,10 @@ This semester (Fall 2021), we are planning to build a functional animatronic hum
 Along the way, we will publish our progress, code, tutorials and workshops.
 
 ### Right Now
-Right now, we're planning the project out, making a timeline, organizing subteams and then getting started with building hardware/software for a servo-
+Right now, we're planning the project out, making a timeline, organizing subteams and then getting started with building the hardware and electronics/software for the project. Primary focuses include designing the hand to get it ready for 3D printing and in the electronics/software side, microcontroller setup and servoing.
 
 <!-- #### Hardware -->
+
 
 <!-- #### Software -->
 
