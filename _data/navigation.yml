@@ -34,6 +34,12 @@ wiki:
         url:    /wiki/rocket-league/start-here
         # - title:  Mid-level Software Docs
         #url:    /wiki/rocket-league/mid-level
+        
+  - title:      Piano Hand Project
+    children:
+      - title:  Start Here 
+        url:    /wiki/piano-hand/start-here
+        
   - title:      Tutorials 
     children:
       - title:  Project Management
