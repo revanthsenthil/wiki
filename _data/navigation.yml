@@ -1,58 +1,58 @@
 header:
-  - title:      Wiki
-    url:        /
-    key:        wiki
-  - title:      Github 
-    url:        https://github.com/purdue-arc/wiki
+  - title: Wiki
+    url: /
+    key: wiki
+  - title: Github
+    url: https://github.com/purdue-arc/wiki
 
 wiki:
-  - title:      Getting Started 
+  - title: Getting Started
     children:
-      - title:  Quick Start 
-        url:    /
-  - title:      Robot Arm Project 
-    children:
-      - title:  Start Here 
-        url:    /wiki/robot-arm/start-here
-      - title:  Software Docs
-        url:    /wiki/robot-arm/software
-      - title:  Hardware Docs
-        url:    /wiki/robot-arm/hardware
+      - title: Quick Start
+        url: /
 
-  - title:      Wizard's Chess Project
+  - title: Tutorials
     children:
-      - title:  Start Here 
-        url:    /wiki/wizards-chess/start-here
-      - title:  Software Docs
-        url:    /wiki/wizards-chess/software
-      - title:  Hardware Docs
-        url:    /wiki/wizards-chess/hardware
+      - title: Project Management
+        url: /wiki/tutorials/project-management
+      - title: Setup ROS
+        url: /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
+      - title: Setup Docker
+        url: /wiki/tutorials/setup-docker
+      - title: ROS Tutorial
+        url: /wiki/tutorials/snake-tutorial
 
-  - title:      Rocket League
+  - title: Robot Arm Project
     children:
-      - title:  Start Here 
-        url:    /wiki/rocket-league/start-here
-        # - title:  Mid-level Software Docs
-        #url:    /wiki/rocket-league/mid-level
-        
-  - title:      Piano Hand Project
+      - title: Start Here
+        url: /wiki/robot-arm/start-here
+      - title: Software Docs
+        url: /wiki/robot-arm/software
+      - title: Hardware Docs
+        url: /wiki/robot-arm/hardware
+
+  - title: Wizard's Chess Project
     children:
-      - title:  Start Here 
-        url:    /wiki/piano-hand/start-here
-        
-  - title:      Tutorials 
+      - title: Start Here
+        url: /wiki/wizards-chess/start-here
+      - title: Software Docs
+        url: /wiki/wizards-chess/software
+      - title: Hardware Docs
+        url: /wiki/wizards-chess/hardware
+
+  - title: Rocket League
     children:
-      - title:  Project Management
-        url:    /wiki/tutorials/project-management
-      - title:  Setup ROS
-        url:    /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
-      - title:  Setup Docker
-        url:    /wiki/tutorials/setup-docker
-      - title:  ROS Tutorial
-        url:    /wiki/tutorials/snake-tutorial
-  - title:      Contributing 
+      - title: Overview
+        url: /wiki/rocket-league/overview
+
+  - title: Piano Hand Project
     children:
-      - title:  Quick Start 
-        url:    /wiki/contributing/quick-start
-      - title:  Wiki Page Template 
-        url:    /wiki/contributing/template
+      - title: Start Here
+        url: /wiki/piano-hand/start-here
+
+  - title: Contributing
+    children:
+      - title: Quick Start
+        url: /wiki/contributing/quick-start
+      - title: Wiki Page Template
+        url: /wiki/contributing/template
