@@ -112,7 +112,7 @@ In the prototype system, cars are tracked through [AprilTags](https://april.eecs
 
 In order to capture the size of the operating field, multiple cameras are required. The current system uses two PointGrey (FLIR) cameras and two Basler cameras.
 
-Processing AprilTags for each camera is computationally expensive, so the team invested in a "Computation Cart" with two desktop PCs. Each PC runs the perception stack for two cameras.
+Processing AprilTags for each camera is computationally expensive, so the team invested in a "Computation Cart" with two desktop PCs. Each PC is responsible for two cameras.
 
 ![Computation Cart](assets/images/computation-cart.jpg)
 
