@@ -116,7 +116,7 @@ Processing AprilTags for each camera is computationally expensive, so the team i
 
 ![Computation Cart](assets/images/computation-cart.jpg)
 
-Information through from each desktop are then communicated over the ROS network:
+Information from each desktop is then communicated over the ROS network:
 
 ![Multi-Cam](assets/images/multiple-cameras.png)
 
