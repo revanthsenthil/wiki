@@ -29,7 +29,7 @@ Like most ARC projects, Rocket League uses [ROS](https://www.ros.org/about-ros/)
 
 > Documentation on setting up and learning about your ROS development evironment can be found [here]({% link wiki/tutorials/setup-ros.md %}).
 
-<!-- 
+<!--
 This is way too high level for an overview, but it should eventually go on a different page
 
 The following was created Spring '21 to detail our ROS network:
@@ -50,6 +50,7 @@ It utilizes a simulator for training, which is described below.
 This component exists for training the High Level Planner, and testing / debugging Mid Level Software. It is written in Python, using the Box2D physics engine, and must realistically simulate all physical elements of the game. It can be used to replace everything below Mid Level Software (including the Velocity Controller and Perception) if the entire game is to be run in simulation.
 
 ### Mid Level Sotware
+
 Together, the Trajectory Planner and Waypoint Controller (both implemented in Python) recieve a collision goal and are responsible for guiding the car to acheive the goal by outputting instantaneous velocity commands for the car.
 
 #### Trajectory Planner
@@ -66,7 +67,7 @@ This component (also called the low-level controller) adjusts the control effort
 
 ### Hardware Inferface
 
-This component allows communication to occur between the ROS network and the RC car. 
+This component allows communication to occur between the ROS network and the RC car.
 
 Control efforts to the car are broadcasted using a FrSky XJT transmitter. These messages are encoded by an Arduino script running on a Teensy 3.1, which communicates to the radio using a digital PPM signal. ROS Serial is used to send the desired efforts to be encoded to the Teensy from the ROS network.
 
@@ -110,15 +111,19 @@ The perception system is responsible for tracking odometry (position, orientatio
 In the prototype system, cars are tracked through [AprilTags](https://april.eecs.umich.edu/software/apriltag#:~:text=AprilTag%20is%20a%20visual%20fiducial,tags%20relative%20to%20the%20camera.) and the ball through OpenCV color thresholding techniques. ARC uses C++ for both systems.
 
 In order to capture the size of the operating field, multiple cameras are required. The current system uses two PointGrey (FLIR) cameras and two Basler cameras.
-<!-- Insert info about camera specs -->
 
-Scaling the prototype system to function on four cameras rather than one requires additional hardware, which will be purchased in the Fall of 2021. The system will also see some redesign in order to achieve better accuracy.
+Processing AprilTags for each camera is computationally expensive, so the team invested in a "Computation Cart" with two desktop PCs. Each PC runs the perception stack for two cameras.
 
-> This is a component that will see a lot of attention during the Fall 2021 semester
+![Computation Cart](assets/images/computation-cart.jpg)
+
+Information through from each desktop are then communicated over the ROS network:
+
+![Multi-Cam](assets/images/multiple-cameras.png)
 
 ## Future work
 
 The team has outlined the following objectives in working towards the overall goal:
+
 - Proving the high-level framework on snake game
 - Testing and tuning of simulator for usage in training high-level planner
 - Completion of camera mounting infrastructure
