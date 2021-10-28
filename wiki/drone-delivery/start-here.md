@@ -1,3 +1,8 @@
+---
+title: Start Here
+date: 2021-10-27 00:00:00 Z
+author: Sooraj Chetput
+---
 ## Mission
 
 Through the exploration of computer-vision, flight, and obstacle avoidance, the goal of this project is to develop fully autonomous drones that can deliver light-weight packages. 
