@@ -52,7 +52,7 @@ wiki:
   
 - title: Autonomous Drone Delivery
     children:
-      - title: Start Here
+      - title: Overview
         url: wiki/drone-delivery/start-here
 
   - title: Contributing
