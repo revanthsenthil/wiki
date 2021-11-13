@@ -50,7 +50,7 @@ wiki:
       - title: Start Here
         url: /wiki/piano-hand/start-here
   
-- title: Autonomous Drone Delivery
+  - title: Autonomous Drone Delivery
     children:
       - title: Overview
         url: /wiki/drone-delivery/overview
