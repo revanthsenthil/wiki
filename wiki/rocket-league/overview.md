@@ -1,7 +1,7 @@
 ---
 date: 2021-06-10
 modified: 2021-09-06
-title: Documentation
+title: Rocket League - Overview
 author: James Baxter, Harrison McCarty
 ---
 

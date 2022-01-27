@@ -1,11 +1,9 @@
 ---
-title: Software Documentation
+title: Wizard's Chess - Software
 date: 2021-06-17 00:00:00
 layout: article
 author: Raghava Uppuluri
 ---
-
-# Docs
 
 ## System Overview
 

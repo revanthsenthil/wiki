@@ -1,11 +1,9 @@
 ---
-title: Software Documentation
+title: Robot Arm - Software
 date: 2021-06-17 00:00:00 Z
 layout: article
 author: Raghava Uppuluri
 ---
-
-# Docs
 
 > If you want to look at code and run some of it, check out [arc_robot_arm](https://github.com/purdue-arc/arc_robot_arm) README for quick start details and usage instructions.
 

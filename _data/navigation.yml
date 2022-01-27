@@ -24,20 +24,20 @@ wiki:
 
   - title: Robot Arm Project
     children:
-      - title: Start Here
-        url: /wiki/robot-arm/start-here
-      - title: Software Docs
+      - title: Overview
+        url: /wiki/robot-arm/overview
+      - title: Software
         url: /wiki/robot-arm/software
-      - title: Hardware Docs
+      - title: Hardware
         url: /wiki/robot-arm/hardware
 
   - title: Wizard's Chess Project
     children:
-      - title: Start Here
-        url: /wiki/wizards-chess/start-here
-      - title: Software Docs
+      - title: Overview
+        url: /wiki/wizards-chess/overview
+      - title: Software
         url: /wiki/wizards-chess/software
-      - title: Hardware Docs
+      - title: Hardware
         url: /wiki/wizards-chess/hardware
 
   - title: Rocket League
@@ -47,8 +47,8 @@ wiki:
 
   - title: Piano Hand Project
     children:
-      - title: Start Here
-        url: /wiki/piano-hand/start-here
+      - title: Overview
+        url: /wiki/piano-hand/overview
   
   - title: Autonomous Drone Delivery
     children:
