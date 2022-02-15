@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Setup Docker
+title: Tutorial - Docker
 date: 2021-09-19
 author: James Baxter
 ---

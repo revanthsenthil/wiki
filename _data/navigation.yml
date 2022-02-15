@@ -15,12 +15,10 @@ wiki:
     children:
       - title: Project Management
         url: /wiki/tutorials/project-management
-      - title: Setup ROS
-        url: /wiki/tutorials/setup-ros # url for project articles is path/to/markdown/file in kebab-case
-      - title: Setup Docker
-        url: /wiki/tutorials/setup-docker
-      - title: ROS Tutorial
-        url: /wiki/tutorials/snake-tutorial
+      - title: ROS
+        url: /wiki/tutorials/ros
+      - title: Docker
+        url: /wiki/tutorials/docker
 
   - title: Robot Arm Project
     children:
