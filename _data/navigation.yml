@@ -15,10 +15,14 @@ wiki:
     children:
       - title: Project Management
         url: /wiki/tutorials/project-management
+      - title: Using the terminal
+        url: /wiki/tutorials/terminal
+      - title: WSL2
+        url: /wiki/tutorials/wsl2
+      - title: X Forwarding
+        url: /wiki/tutorials/x-forwarding
       - title: ROS
         url: /wiki/tutorials/ros
-      - title: Docker
-        url: /wiki/tutorials/docker
 
   - title: Robot Arm Project
     children:

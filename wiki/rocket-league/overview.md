@@ -27,7 +27,7 @@ For more information on each layer / subsystem, see the below sections to learn 
 
 Like most ARC projects, Rocket League uses [ROS](https://www.ros.org/about-ros/) to handle communication between each component. ROS is compatible with the Python, C++, and Arduino used on the project.
 
-> Documentation on setting up and learning about your ROS development evironment can be found [here]({% link wiki/tutorials/setup-ros.md %}).
+> Documentation on setting up and learning about your ROS development evironment can be found [here](/wiki/tutorials/ros).
 
 <!--
 This is way too high level for an overview, but it should eventually go on a different page

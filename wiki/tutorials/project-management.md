@@ -1,6 +1,6 @@
 ---
 date: 2021-09-01
-title: Project Management
+title: Tutorial - Project Management
 ---
 
 Managing an ARC-supported project can be a challenging, but rewarding experience. Throughout this journey, you will pick up on many skills and lessons which can be carried through the rest of your life. The uncertainty of what lies ahead prevents us from outlining every possible milestone, but here we intend to provide general action items for how to successfully carry out your project within ARC.
