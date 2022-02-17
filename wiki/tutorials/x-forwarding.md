@@ -15,7 +15,7 @@ on your machine that are being run from your Docker container. You need
 to install an X client, set up the appropriate firewall rules, then tell Docker
 to forward its display to your client.
 
-## Steps by OS
+## Instructions by OS
 
 X forwarding configuration varies by machine, so follow the steps that match your operating system. If you run into any issues or don't have a supported OS, reach out in the comments below.
 
@@ -47,6 +47,7 @@ These instructions are taken from a [Reddit post](https://www.reddit.com/r/Windo
 Go ahead and save and close everything. You may need to reboot your X client.
 
 #### WSL2 Setup
+
 We will need to edit a file called the `bashrc`. This is a script that is run
 every time you open a new terminal in order to set up your environment. Modify
 it by copy and pasting the below command in _exactly_. Run these commands in
@@ -73,4 +74,33 @@ or hit `CTRL+C` in order to kill the program.
 
 ### Mac
 
-TODO
+#### X Client Set Up
+
+The most widely used X client for Mac is X Quartz. You can install it [here](https://www.xquartz.org/).
+
+#### Configure X Quartz
+
+You need to first allow connections from network clients:
+
+```zsh
+defaults write org.macosforge.xquartz.X11.plist nolisten_tcp 0
+```
+
+Now run the following command to allow localhost access on startup:
+
+```zsh
+echo 'export DISPLAY=host.docker.internal:0 \nxhost + 127.0.0.1' >> ~/.zshrc
+```
+
+After running the above command, restart your system.
+
+#### Testing 
+
+You will need to download a small program called `xeyes` in order to test the X
+forwarding. It can be installed and run with the following commands:
+```bash
+sudo apt install -y x11-apps
+xeyes
+```
+You'll see a little pair of eyes follow your cursor around. You can X out of it
+or hit `CTRL+C` in order to kill the program.

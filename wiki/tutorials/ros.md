@@ -29,6 +29,8 @@ To simplify the installation and setup process for using ROS, ARC has created a 
 
 ARC's DE relies on a program known as Docker. This program virtualizes various operating systems and dependencies to ensure your software is compatible to run on any device you choose to use.
 
+> ARC use to fully support another DE using Construct. If Docker fails to work on your machine, you can explore [this method](alt-ros) as an alternative.
+
 If you have ever worked with a virtual machine, it's the same concept but avoids a bunch of uncecessary programs and overhead.
 
 'Images' in Docker can be thought of as blueprints for a computer to be virtualized. ARC has created a generic image with all the required dependencies for ROS. When working on a ROS project, you will run a 'container', which is just a single instance of ARC's image. All of this is managed by boilerplate scripts that you just need to include in your project. 
@@ -43,7 +45,7 @@ The rest of this section will detail the setup process for ARC's DE.
 
 Follow [this installation guide](https://docs.docker.com/engine/install/) to get Docker for your specific OS.
 
-### OS Considerations
+### Instructions by OS
 
 See the below instructions depending on what operating system you are running.
 
@@ -64,7 +66,7 @@ You need to setup X forwarding. This allows you to display GUIs (graphical user 
 
 #### Linux
 
-This guide has been tested to work on Ubuntu 18.04 and 20.04. If you have a different distribution, it should also work without issue, provided there is a Docker release for you.
+This guide has been tested to work on Ubuntu 18.04 and 20.04. If you have a different distribution, it should also work without issue.
 
 ### Testing
 
