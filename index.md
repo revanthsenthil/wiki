@@ -1,5 +1,5 @@
 ---
-title: Quick Start
+title: About the Wiki
 date: 2021-06-01 00:00:00 Z
 layout: article
 comment: false

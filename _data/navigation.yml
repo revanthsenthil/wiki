@@ -10,8 +10,8 @@ wiki:
     children:
       - title: About the Wiki
         url: /
-      - title: Club Tools and Link
-        url: /general-info/tools-and-links
+      - title: Club Tools and Links
+        url: /wiki/general-info/tools-and-links
 
   - title: Tutorials
     children:
