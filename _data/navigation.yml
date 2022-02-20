@@ -6,10 +6,12 @@ header:
     url: https://github.com/purdue-arc/wiki
 
 wiki:
-  - title: Getting Started
+  - title: General Information
     children:
-      - title: Quick Start
+      - title: About the Wiki
         url: /
+      - title: Club Tools and Link
+        url: /general-info/tools-and-links
 
   - title: Tutorials
     children:
