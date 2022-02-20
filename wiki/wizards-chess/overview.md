@@ -1,7 +1,7 @@
 ---
 layout: article
 date: 2021-07-30
-title: Start Here
+title: Wizard's Chess - Overview
 ---
 
 ## Goal

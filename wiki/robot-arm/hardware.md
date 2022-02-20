@@ -1,5 +1,5 @@
 ---
-title: Hardware Documentation
+title: Robot Arm - Hardware
 date: 2021-06-17 00:00:00 Z
 layout: article
 author: Raghava Uppuluri

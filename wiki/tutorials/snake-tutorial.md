@@ -1,9 +1,12 @@
 ---
-title: ROS Tutorial
-date: 2021-06-01 00:00:00 Z
+title: Tutorial - Snake Game
+date: 2022-02-15 00:00:00 Z
 ---
 
-For **Windows**, use the [ConstructSim version](https://app.theconstructsim.com/#/Rosject/369405) of the tutorial.
+## Prerequisites
+
+Before starting this tutorial, we recommend:
+- [Setting up your development environment](ros)
 
 ## Overview
 Before we dive into ROS, let's break down what we will be accomplishing.
@@ -22,15 +25,17 @@ There are two parts to this tutorial:
   score your snake can get.
 
 ## Setup
-> If you haven't setup ROS, please do so [here]({% link wiki/tutorials/setup-ros.md %}).
 
-Clone the repo into your ROS workspace `src` folder
+If you've correctly setup your development environment, then you should have a `catkin_ws` folder with `src/arc_tutorials` a folder inside. Move into the `arc_tutorials` folder and run the docker container:
 
+```bash
+./arc_tutorials/docker/docker-run.sh
 ```
-git clone https://github.com/purdue-arc/arc_tutorials.git
-```
+
+You should now be inside the container.
 
 ## Verification
+
 Ensure your file structure matches the following:
 ```
 catkin_ws/ <-- You should be here
@@ -49,6 +54,7 @@ catkin_ws/ <-- You should be here
        │
        └───snakesim/ (snake_tutorial backend)
 ```
+
 We will explain the file structure in-depth later, so don't worry if it doesn't
 make any sense now.
 
@@ -61,10 +67,10 @@ If you run into issues, start by doing independent research. If you haven't
 found a solution after sufficiently making an attempt on your own, then add your question at the [botttom of this page](http://localhost:4000/wiki/tutorials/snake-tutorial#give-us-feedback). 
 
 
-# Running the Snake Tutorial Example
+## Running the Snake Tutorial Example
 In this section, we will be covering high-level ROS concepts and run the snake game example to see what we will be working towards.
 
-## ROS Concepts
+### ROS Concepts
 We discussed previously what ROS is, but now we are going to dive into
 how ROS works.
 
@@ -96,7 +102,7 @@ until 5 minutes and 53 seconds.
 > If some of these concepts aren't yet clear, don't worry. Through the
   walkthrough we will continue to strengthen our understanding.
 
-## Snake Example
+### Snake Example
 Now let's try to apply some of the concepts we've learned to the snake
 game. We will start by running the `snakesim` package to see what we will
 be controlling.
@@ -194,19 +200,19 @@ autonomously playing the game. If you watch it long enough, eventually
 it will fail because its logic is very simple. By the end of this
 tutorial, we will have built this same controller from the ground up.
 
-## Final Notes
+### Final Notes
 Congratulations, you just finished getting familiarized with the snake game
 and the controller! You'll develop this same controller by following this
 tutorial series. In the next step, you'll create a package to hold your
 controller, then you'll write some nodes in order to control the snake.
 
 
-# Creating the Controller Package
+## Creating the Controller Package
 Up to this point, we have explored high-level ROS concepts and ran the
 Snake game example controller. We will now go through practical concepts
 related to development within ROS.
 
-## ROS File Structure
+### ROS File Structure
 Let's take a deeper dive into our project file structure.
 
 Software in ROS is organized in `packages`. Packages contain our nodes, 
@@ -278,7 +284,7 @@ logic.
 
 `package.xml` is a manifest that contains general package information.
 
-## Creating a New Package
+### Creating a New Package
 We will start by moving into the `src/` directory of our 
 catkin workspace. As a reminder, you should still be within the container environment and 
 have the following file path:
@@ -311,7 +317,7 @@ going to modify the `CMakeLists.txt` and `package.xml`. We will also be making
 a few directories. If you aren't comfortable making directories on the
 commandline, you can do these steps in an IDE like VS Code.
 
-## Modifying Package.xml
+### Modifying Package.xml
 The `package.xml` file exists to capture some basic information about your
 package, such as the author, maintainer, license, and any dependencies that your
 package has. If we open the existing one, you can see it has a lot of
@@ -458,7 +464,7 @@ You should end up with something like this:
 </package>
 ```
 
-## Modifying CMakeLists.txt
+### Modifying CMakeLists.txt
 The `CMakeLists.txt` is similar to `package.xml` in that it contains a lot of
 templated information for you to go in and edit. For a C++ package, it is very
 important, rather complicated, and will be used to build the code. For a purely
@@ -693,7 +699,7 @@ catkin_package()
 Optionally, you can leave the install and test section in there, but we won't be
 using it for this tutorial.
 
-## Creating the Package Directory Structure
+### Creating the Package Directory Structure
 We're going to remove the existing `src/` directory, which is commonly used for
 C++ code or Python modules (we are making Python nodes, which are different).
 
@@ -710,7 +716,7 @@ snake_controller/
 └───package.xml
 ```
 
-## Sourcing the Workspace Automatically
+### Sourcing the Workspace Automatically
 Remember how we said that you need to source the workspace for every new
 terminal window that you open? The command looks like this:
 ```bash
@@ -731,14 +737,14 @@ We can now run that to make it take effect in our current terminal:
 source ~/.bashrc
 ```
 
-## Final Notes
+### Final Notes
 Congratulations, you just finished creating a ROS package! In the following
 documents, we'll build three nodes that will allow your new package to control
 the snake game that you ran earlier.
 
 
-# Heading Controller
-## Overview
+## Heading Controller
+### Overview
 Since our snake recieves linear and angular velocity inputs, making a heading
 controller seems like a good place to start. This will allow us to control the
 heading of the snake using feedback control.
@@ -753,7 +759,7 @@ like this:
 This node is also going to handle the linear velocity command too. We're just
 going to keep that at a constant value in order to keep things simple.
 
-## Creating the Program
+### Creating the Program
 Let's go ahead and implement this controller in Python now.
 
 We need to start by creating a new file. In the last tutorial, we were left with
@@ -838,7 +844,7 @@ order in which that all happens:
 print "I am here #1"
 ```
 
-## Creating the Node
+### Creating the Node
 Let's start our ROS specific setup now.
 
 Let's modify the body of the `__init__` function to be the following. This is
@@ -907,7 +913,7 @@ You will see your node, `snake_heading_controller` in the list of running nodes!
 Feel free to try changing the name of the node or removing the `spin` command
 to see what it does.
 
-## Creating Subscriptions
+### Creating Subscriptions
 In the last section, we learned that `spin` tells the program to wait
 indefinitely and process message subscriptions. Let's create some of those
 subscriptions now.
@@ -1002,7 +1008,7 @@ rosnode info snake_heading_controller
 You will see it is subscribed to `snake/pose` and `controller/heading` like we
 intended!
 
-## Creating Publishers
+### Creating Publishers
 Thinking back to our block diagram, our program needs to output the commanded
 linear velocity. We will need a publisher in order to do this.
 
@@ -1085,7 +1091,7 @@ rosnode info snake_heading_controller
 ```
 You will see it is now publishing to `snake/cmd_vel` as we hoped!
 
-## Dealing with ROS Message Definitions
+### Dealing with ROS Message Definitions
 Let's quickly talk about how to pull data out of the ROS messages that our
 callbacks are recieving. The first thing you'll want to do is determine the
 layout of the message you're receiving. This can be done by browsing the API
@@ -1197,7 +1203,7 @@ if __name__ == "__main__":
 You can run it again if you want, but there shouldn't be any difference from the
 last time we ran it.
 
-## Implementing the Controller
+### Implementing the Controller
 Now that everything is nicely laid out, let's get to the actual logic behind
 the controller.
 
@@ -1329,7 +1335,7 @@ if __name__ == "__main__":
 
 We'll be able to test this shortly, but it isn't ready just yet.
 
-## Publishing the Ouput
+### Publishing the Output
 Earlier we made a publisher and we wrote the logic to get the value to publish.
 One of the last things we need is actually publishing the value.
 
@@ -1416,7 +1422,7 @@ if __name__ == "__main__":
 We could go ahead and test this right now, but we're going to do a little bit of
 finishing touches first.
 
-## Using Parameters
+### Using Parameters
 Currently, we have two contants in our code, `ANGULAR_VELOCITY` and
 `LINEAR_VELOCITY`. If we want to change them, we would need to edit the Python
 file for the node. That may be OK if we never expect these values to change,
@@ -1502,7 +1508,7 @@ if __name__ == "__main__":
 Again, we could go ahead and test this script right now. However, we're going to
 set something up to make that an easier process in the next step.
 
-## Creating a Launch File
+### Creating a Launch File
 Launching this program is somewhat involved. You need to start the ROS core in
 one terminal window, then you need to launch this node in another. Can you
 imagine how many terminal windows you would need for a large project? Thankfully,
@@ -1559,7 +1565,7 @@ roslaunch snake_controller snake_controller.launch
 This isn't super exciting because it isn't recieving any input and isn't
 connected to the snake game. We'll fix that shortly.
 
-## Extending the Launch File
+### Extending the Launch File
 You could launch the snake game in another shell with this command:
 ```bash
 roslaunch snakesim snakesim.launch
@@ -1595,7 +1601,7 @@ rosrun rqt_graph rqt_graph
 You should see a cool little diagram showing how your nodes are connected by
 various topics.
 
-## Giving the Heading Controller Input
+### Giving the Heading Controller Input
 Right now, it still isn't super exciting to run our node. The heading controller
 isn't recieving any input so it isn't telling the snake to do anything. There
 are a few ways we can fix this.
@@ -1626,7 +1632,7 @@ Then you need to hit a drop down arrow to be able to access the `data` field.
 Once you have all that, hit the checkbox to start publishing. The controller
 should behave the same way regardless of where the data is coming from.
 
-## Further Launch File Notes
+### Further Launch File Notes
 This is a quick note about how to work with arguments and parameters. This is
 super useful for creating a robust system of modular launch files. We won't go
 super in depth, and it isn't needed for the tutorial. However, you might find it
@@ -1683,7 +1689,7 @@ If you're curious about what other shenanigans you can achieve with launch
 files, the [ROS wiki](http://wiki.ros.org/roslaunch/XML) has a full guide to
 the syntax.
 
-## Final Notes
+### Final Notes
 Congratulations, you made it to the end! You just made your first ROS node to
 build a controller for the snake. This node is relatively simple, but hopefully
 you learned a lot about using ROS that will help you in creating the next two
@@ -1860,8 +1866,8 @@ This is the section of our code that gets called first when we start the
 program. We simply make a `SnakeheadingController` object, then let the
 `__init__` method take over.
 
-# Position Controller
-## Overview
+## Position Controller
+### Overview
 Our snake is now controlled by heading. Why don't we try to extend it another
 layer and control with with position? That seems useful if we want to tell it
 to chase the goal or give it a series of waypoints.
@@ -1870,7 +1876,7 @@ We'll create a closed loop controller like last time. Our inputs will be the
 current position of the snake's head and the commanded position. Our output will
 be the required heading to reach that positition.
 
-## Creating the Program
+### Creating the Program
 This will be just like the last program. Let's call it
 `snake_position_controller` and put it in the `nodes` folder like last time.
 Make sure to make it executable!
@@ -1905,7 +1911,7 @@ if __name__ == "__main__":
     SnakePositionController()
 ```
 
-## ROS Setup
+### ROS Setup
 This section will also be very similar to last time. We're going to initilize
 the node, create our subscribers, and create our publishers. Take a look on the
 ROS wiki, at both the [std_msgs](http://wiki.ros.org/std_msgs) and
@@ -1968,7 +1974,7 @@ We'll always just chase the latest position command.
 There are many other messages worth looking at on the [ROS wiki](http://wiki.ros.org/common_msgs)
 if you have a specific need in the future.
 
-## Implementing the Controller
+### Implementing the Controller
 This controller can be implemented much like the last one. Create a variable to
 track the desired position, then modify the positon callback in order to set it.
 
@@ -2067,7 +2073,7 @@ with how making a local copy can resolves that issue. Making a local copy will
 not always resolve the issue, but it does for this specific case. It also
 discusses another technique to write threadsafe code using `Locks`.
 
-## Updating Launch Files and Testing
+### Updating Launch Files and Testing
 Updating the launch file is relatively simple. Put this line in
 `snake_controller.launch` right below the other node:
 ```xml
@@ -2081,7 +2087,7 @@ For testing, you can use either `rostopic pub` or `rqt_publisher`. See if you
 can figure out the command for `rostopic pub`. Tab completion will be your
 friend :)
 
-## Final Notes
+### Final Notes
 Congratulations, you just finished your second node and are almost done!
 This tutorial was much more hands off, so hopefully you were able to apply a lot
 of the knowledge you gained while writing the first node in order to write this
@@ -2140,8 +2146,8 @@ if __name__ == "__main__":
     SnakePositionController()
 ```
 
-# Goal Relay
-## Overview
+## Goal Relay
+### Overview
 Our snake is now controlled by position. If we want to keep things really
 simple, the snake can just chase the goal with no regard for walls or its own
 body. You'll find it is pretty effective at the start of the game, but the
@@ -2213,7 +2219,7 @@ even assign them using an equal sign in the argument list.
 
 You can learn more about lambdas [online](https://www.w3schools.com/python/python_lambda.asp).
 
-## Updating Launch Files and Testing
+### Updating Launch Files and Testing
 Updating the launch file is no different from the position controller. Give it a
 shot and see if the snake runs. Remember to `catkin build` and source!
 
@@ -2226,7 +2232,7 @@ You will find you no longer need to manually plug in data in order to test.
 Instead the snake controller is done, and will run automatically. Use `rqt_plot`
 to see how all the nodes work together!
 
-## Final Notes
+### Final Notes
 Congratulations, you just finished writing a basic controller for the snake!
 Hopefully you learned a great deal about how ROS works, and how to write nodes
 in Python. You should be confident to experiment with your own ideas in to
@@ -2264,8 +2270,8 @@ if __name__ == "__main__":
     rospy.spin()
 ```
 
-# Next Steps
-## Overview
+## Next Steps
+### Overview
 You did it. You finished the guided tutorials. You likely learned a lot about
 ROS and Python along the way. Hopefully you take some pride in your accomplishment because learning to use ROS is no easy feat.
 
@@ -2274,12 +2280,12 @@ controller in order to expand on your ROS knowledge. We'll also give you some
 tips and insight into additional topics you may encounter while working on your
 improvements.
 
-## Ideas for Improvement
+### Ideas for Improvement
 Feel free to use some of these ideas in the list, or go off and do your own
 thing. This is designed to be open ended. You can build on the existing
 controller or tear it down completely to make your own system.
 
-### Self Avoidance System
+#### Self Avoidance System
 The snake dies when it intersects with itself. You could create a new node to
 sit between the goal relay and the position controller that will re-route the
 snake if it is detecting a collision.
@@ -2294,7 +2300,7 @@ intersect with the current position by some amount. Cutting corners like this
 may save you valuable time if you're trying to maximize the score in a fixed
 time frame.
 
-### Wall Avoidance System
+#### Wall Avoidance System
 Another way that the snake dies is by intersecting with the wall. Commonly, this
 is an issue when the snake approaches a goal near the wall in a way that doesn't
 leave room for the snake to get out.
@@ -2308,7 +2314,7 @@ planning algorithm that looks past reaching the next goal. For example Rapidly
 Exploring Random Trees (RRT) could be used to find a safe path to the goal and
 an arbitray secondary location nearby.
 
-### Machine Learning
+#### Machine Learning
 If you have experience with machine learning, you can probably apply it to this
 problem. If you want GPU acceleration, take a look at modifying the Docker
 scripts to use the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker).

@@ -1,7 +1,9 @@
 ---
-title: Tutorial - Setup ROS
+title: Tutorial - Alternative ROS Setup
 date: 2021-06-01 00:00:00
 ---
+
+> DEPRECATED: ARC now recommends using Docker for your ROS development environment. Installation using current recommendations can be found [here](ros)
 
 The following tutorial has been tested for **MacOS (non-M1) and Linux** systems.
 
