@@ -43,11 +43,13 @@ The current swipe list is:
 
 ## 3D Printing
 
-ARC maintains two 3D printers within the shop space.
+ARC maintains two 3D printers within the shop space:
+- Tony: TODO  
+- Chelsea: Creality CR-6 SE
 
 If you have an interest in using either printer, reach out in the ARC discord under the "3D printing" channel.
 
-The recommended printer settings are as follows:
+The recommended printer profiles using the [Cura Slicer](https://ultimaker.com/software/ultimaker-cura):
 
 Chelsea Settings:
 ```
@@ -55,6 +57,21 @@ Print Speed: 50.0 mm/s
 Infill density: 15%
 Layer Height: 0.15 mm 
 Cooling: 100%
+```
+
+Tony Settings:
+> Default Settings for Monoprice printer in Cura on **Normal** print quality 
+```
+Print Speed: 50.0 mm/s 
+Infill density: 22%
+Wall Thickness: 1.05 mm
+Top/Bottom Thickness: 0.72 mm
+Build Plate Temperature: 60 C
+Layer Height: 0.175 mm 
+Initial Layer Height: 0.2625 mm 
+Minimum Layer Time: 5s
+Minimum Speed: 10 mm/s
+Fan Speed: 100%
 ```
 
 ## Advanced Manufacturing
