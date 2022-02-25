@@ -12,6 +12,8 @@ wiki:
         url: /
       - title: Club Tools and Links
         url: /wiki/general-info/tools-and-links
+      - title: BIDC Information
+        url: /wiki/general-info/bidc
 
   - title: Tutorials
     children:
