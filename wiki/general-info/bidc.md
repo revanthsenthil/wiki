@@ -44,7 +44,7 @@ The current swipe list is:
 ## 3D Printing
 
 ARC maintains two 3D printers within the shop space:
-- Tony: TODO  
+- Tony: Monoprice Maker Select 2 
 - Chelsea: Creality CR-6 SE
 
 If you have an interest in using either printer, reach out in the ARC discord under the "3D printing" channel.
