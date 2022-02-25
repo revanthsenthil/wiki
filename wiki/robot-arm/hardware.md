@@ -23,7 +23,11 @@ Quick links:
 <img src="assets/images/moveo.jpg" alt="Moveo" width="400"/>
 
 ### Mr. Janktastic
-Building a 6-DOF robot arm fully from scratch with stepper motors and in metal. Preview coming in soon.
+Building a 6-DOF robot arm fully from scratch with Dynamixel Servos. 
+
+
+<img src="assets/images/janktastic.png" alt="Moveo" width="400"/>
+
 
 ## Resources
 
