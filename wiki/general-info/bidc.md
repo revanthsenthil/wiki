@@ -60,18 +60,19 @@ Cooling: 100%
 ```
 
 Tony Settings:
-> Default Settings for Monoprice printer in Cura on **Normal** print quality 
 ```
 Print Speed: 50.0 mm/s 
-Infill density: 22%
+Infill density: 15%
 Wall Thickness: 1.05 mm
 Top/Bottom Thickness: 0.72 mm
 Build Plate Temperature: 60 C
-Layer Height: 0.175 mm 
+Layer Height: 0.15 mm 
 Initial Layer Height: 0.2625 mm 
+Top/Bottom Layer Height: 0.8 mm
 Minimum Layer Time: 5s
 Minimum Speed: 10 mm/s
 Fan Speed: 100%
+Cooling: 100%
 ```
 
 ## Advanced Manufacturing
