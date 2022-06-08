@@ -127,9 +127,10 @@ If this doesnt work:
 
 ### Helpful Links:
 
-    >[Medium Article Guide](https://medium.com/crowdbotics/a-complete-one-by-one-guide-to-install-docker-on-your-mac-os-using-homebrew-e818eb4cfc3)
+>[Medium Article Guide](https://medium.com/crowdbotics/a-complete-one-by-one-guide-to-install-docker-on-your-mac-os-using-homebrew-e818eb4cfc3)
 
-    >[Oracle Archives Guide](https://web.archive.org/web/20190514151847/https://blogs.oracle.com/oraclewebcentersuite/running-gui-applications-on-native-docker-containers-for-mac)
+>[Oracle Archives Guide](https://web.archive.org/web/20190514151847/https://blogs.oracle.com/oraclewebcentersuite/running-gui-applications-on-native-docker-containers-for-mac)
 
-    >[Legendary Stack Overflow Answer #1](https://stackoverflow.com/questions/38686932/how-to-forward-docker-for-mac-to-x11)
-    >[Legendary Stack Overflow Answer #2](https://stackoverflow.com/questions/28392949/running-chromium-inside-docker-gtk-cannot-open-display-0/34586732#comment63471630_28395350)
+>[Legendary Stack Overflow Answer #1](https://stackoverflow.com/questions/38686932/how-to-forward-docker-for-mac-to-x11)
+    
+>[Legendary Stack Overflow Answer #2](https://stackoverflow.com/questions/28392949/running-chromium-inside-docker-gtk-cannot-open-display-0/34586732#comment63471630_28395350)
