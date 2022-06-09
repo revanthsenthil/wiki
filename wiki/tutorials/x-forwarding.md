@@ -94,6 +94,10 @@ echo 'export DISPLAY=host.docker.internal:0 \nxhost + 127.0.0.1' >> ~/.zshrc
 
 After running the above command, restart your system.
 
+#### Errors with running X Quartx
+
+If you have errors while completing the above steps, take a look at the following [trouble shooting guide](mac-errors).
+
 #### Testing 
 
 You will need to download a small program called `xeyes` in order to test the X
