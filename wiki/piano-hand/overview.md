@@ -12,15 +12,11 @@ The primary objective of Piano Hand is to explore the perspective of robotics in
 
 The goal of the project is to build a fully autonomous robot arm that can play the piano. The human hand, with 27 degrees of freedom (DOF), has so far been the most dextrous mechanism to play the piano and the closer we get to replicating that degree of freedom and movement, the better it is to move the arm and play the piano.
 
-{% include googleDrivePlayer.html id="1P8rwWDJa1Yuv88X697RMvEq04j1IgpqW/preview" %}
-
 This semester (Fall 2022), we are planning to refine our working model of the animatronic hand built last semester with the help of accurate servo motor and flex sensor functioning. We would expect to extend functioning to two hands as well. Additionally, we are starting a new path in software along the lines of machine learning and optical image recognition by building a model that can read sheet music, given an image format.
 
 Along the way, we will publish our progress, code, tutorials and workshops.
 
-Project GitHub Repositories: <a href="https://github.com/purdue-arc/arc-piano-hand-code"> https://github.com/purdue-arc/arc-piano-hand-code </a>, <a href="https://github.com/purdue-arc/arc-piano-hand">https://github.com/purdue-arc/arc-piano-hand </a>
-
-(The above two will be combined soon.)
+Project GitHub Repository: <a href="https://github.com/purdue-arc/arc-piano-hand">https://github.com/purdue-arc/arc-piano-hand </a>
 
 ---
 
@@ -78,7 +74,7 @@ Hardware primarily works on making and refining CAD models with tools available,
 
 <ul>
 <li>
-<b>Lead</b>: Rugved Dikay, Aeronautical and Aerospace Engineering
+Rugved Dikay, Aeronautical and Aerospace Engineering
 </li>
 <li>
 Akshay, Electrical Engineering
